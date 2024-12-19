@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+#jobList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#jobList li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+#loading,
+#error {
+  text-align: center;
+  color: #666;
+}
+
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn_page {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+.btn_page:hover {
+  background-color: #f0f0f0;
+}
+
+.btn_page.prev::before,
+.btn_page.next::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+}
+
+.btn_page.prev::before {
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+.btn_page.next::before {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+.page_num {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

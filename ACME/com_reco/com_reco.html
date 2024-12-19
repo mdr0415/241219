@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Data Viewer</title>
+    <!-- XLSX 라이브러리 로드 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- 사용자 정의 CSS 파일 로드 -->
+    <link rel="stylesheet" href="com_reco.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 필터 섹션 -->
+        <div class="filter-section">
+            <!-- 지역 필터 드롭다운 -->
+            <select id="addressFilter" onchange="filterAndDisplayData()">
+                <option value="">모든 지역</option>
+            </select>
+            <!-- 검색 입력 필드 -->
+            <input type="text" id="searchInput" placeholder="이름으로 검색" oninput="filterAndDisplayData()">
+        </div>
+
+        <!-- 데이터 출력 영역 -->
+        <div id="output" class="job-list"></div>
+        <!-- 페이지네이션 영역 -->
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <!-- 사용자 정의 JavaScript 파일 로드 -->
+    <script src="com_reco.js"></script>
+</body>
+
+</html>
